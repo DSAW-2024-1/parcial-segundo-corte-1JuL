@@ -1,0 +1,22 @@
+{
+  "name": "segundo-parcial-daw",
+  "version": "1.0.0",
+  "description": "Segundo parcial DAW",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "nodemon": "^3.1.0"
+  },
+  "keywords": []
+}
