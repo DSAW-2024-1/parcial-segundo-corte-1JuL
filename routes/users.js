@@ -6,22 +6,22 @@ router.get("/", (req, res) => {
 });
 
 router.post("/",(req, res) => {
-  const { name, lastname, email, city, country } = req.query;
+  const { name, lastName, email, city, country } = req.query;
   const defaultCity = city || 'Bogotá';
   const defaultCountry = country || 'Colombia';
 
   // Validate required fields
-  if (!name || !lastname || !email) {
+  if (!name || !lastName || !email) {
     return res.status(400).json({ 
       error: 'Missing required fields', 
       ejemplo_uso: '/users?name=(Nombre)&lastname=(Apellido)&email=(Email)' ,
-      ejemplo2_uso_2: '/users?name=(Nombre)&lastname=(Apellido)&email=(Email)&city=(opcional)&country=(opcional)'
+      ejemplo2_uso_2: '/users?name=(Nombre)&lastName=(Apellido)&email=(Email)&city=(opcional)&country=(opcional)'
     });
   }
 
   const user = {
     name,
-    lastname,
+    lastName,
     email,
     city: defaultCity,
     country: defaultCountry
